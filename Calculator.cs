@@ -280,7 +280,16 @@ namespace Calculator
 
         private void decimalPoint_Click(object sender, EventArgs e)
         {
-
+            if (numberInput.Text == "" || startNum2)
+            {
+                numberInput.Text = "";
+                numberInput.Text += "0.";
+                startNum2 = false;
+            }
+            else
+            {
+                numberInput.Text += ".";
+            }
         }
         private void numberInput_TextChanged(object sender, EventArgs e)
         {
