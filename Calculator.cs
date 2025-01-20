@@ -265,7 +265,17 @@ namespace Calculator
 
         private void sign_Click(object sender, EventArgs e)
         {
-
+            if (numberInput.Text == "" || startNum2)
+            {
+                numberInput.Text = "";
+                numberInput.Text += "-";
+                startNum2 = false;
+            } 
+            else
+            {
+                double input = double.Parse(numberInput.Text) * -1;
+                numberInput.Text = input.ToString();        
+            }
         }
 
         private void decimalPoint_Click(object sender, EventArgs e)
