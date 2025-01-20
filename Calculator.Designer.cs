@@ -48,13 +48,14 @@
             this.three = new System.Windows.Forms.Button();
             this.two = new System.Windows.Forms.Button();
             this.one = new System.Windows.Forms.Button();
+            this.divideByZeroErr = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // numberInput
             // 
             this.numberInput.BackColor = System.Drawing.Color.White;
             this.numberInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberInput.Location = new System.Drawing.Point(12, 12);
+            this.numberInput.Location = new System.Drawing.Point(11, 23);
             this.numberInput.Name = "numberInput";
             this.numberInput.ReadOnly = true;
             this.numberInput.Size = new System.Drawing.Size(502, 62);
@@ -65,47 +66,51 @@
             // add
             // 
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(51, 94);
+            this.add.Location = new System.Drawing.Point(52, 123);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(100, 100);
             this.add.TabIndex = 1;
             this.add.Text = "+";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // subtract
             // 
             this.subtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtract.Location = new System.Drawing.Point(157, 94);
+            this.subtract.Location = new System.Drawing.Point(158, 123);
             this.subtract.Name = "subtract";
             this.subtract.Size = new System.Drawing.Size(100, 100);
             this.subtract.TabIndex = 2;
             this.subtract.Text = "−";
             this.subtract.UseVisualStyleBackColor = true;
+            this.subtract.Click += new System.EventHandler(this.subtract_Click);
             // 
             // multiply
             // 
             this.multiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiply.Location = new System.Drawing.Point(263, 94);
+            this.multiply.Location = new System.Drawing.Point(264, 123);
             this.multiply.Name = "multiply";
             this.multiply.Size = new System.Drawing.Size(100, 100);
             this.multiply.TabIndex = 3;
             this.multiply.Text = "×";
             this.multiply.UseVisualStyleBackColor = true;
+            this.multiply.Click += new System.EventHandler(this.multiply_Click);
             // 
             // divide
             // 
             this.divide.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.divide.Location = new System.Drawing.Point(369, 94);
+            this.divide.Location = new System.Drawing.Point(370, 123);
             this.divide.Name = "divide";
             this.divide.Size = new System.Drawing.Size(100, 100);
             this.divide.TabIndex = 4;
             this.divide.Text = "÷";
             this.divide.UseVisualStyleBackColor = true;
+            this.divide.Click += new System.EventHandler(this.divide_Click);
             // 
             // seven
             // 
             this.seven.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seven.Location = new System.Drawing.Point(51, 200);
+            this.seven.Location = new System.Drawing.Point(52, 229);
             this.seven.Name = "seven";
             this.seven.Size = new System.Drawing.Size(100, 100);
             this.seven.TabIndex = 5;
@@ -116,7 +121,7 @@
             // eight
             // 
             this.eight.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eight.Location = new System.Drawing.Point(157, 200);
+            this.eight.Location = new System.Drawing.Point(158, 229);
             this.eight.Name = "eight";
             this.eight.Size = new System.Drawing.Size(100, 100);
             this.eight.TabIndex = 6;
@@ -127,7 +132,7 @@
             // nine
             // 
             this.nine.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nine.Location = new System.Drawing.Point(263, 200);
+            this.nine.Location = new System.Drawing.Point(264, 229);
             this.nine.Name = "nine";
             this.nine.Size = new System.Drawing.Size(100, 100);
             this.nine.TabIndex = 7;
@@ -138,17 +143,18 @@
             // allClear
             // 
             this.allClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.allClear.Location = new System.Drawing.Point(369, 200);
+            this.allClear.Location = new System.Drawing.Point(370, 229);
             this.allClear.Name = "allClear";
             this.allClear.Size = new System.Drawing.Size(100, 100);
             this.allClear.TabIndex = 8;
             this.allClear.Text = "AC";
             this.allClear.UseVisualStyleBackColor = true;
+            this.allClear.Click += new System.EventHandler(this.allClear_Click);
             // 
             // four
             // 
             this.four.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.four.Location = new System.Drawing.Point(51, 306);
+            this.four.Location = new System.Drawing.Point(52, 335);
             this.four.Name = "four";
             this.four.Size = new System.Drawing.Size(100, 100);
             this.four.TabIndex = 9;
@@ -159,7 +165,7 @@
             // five
             // 
             this.five.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.five.Location = new System.Drawing.Point(157, 306);
+            this.five.Location = new System.Drawing.Point(158, 335);
             this.five.Name = "five";
             this.five.Size = new System.Drawing.Size(100, 100);
             this.five.TabIndex = 10;
@@ -170,7 +176,7 @@
             // six
             // 
             this.six.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.six.Location = new System.Drawing.Point(263, 306);
+            this.six.Location = new System.Drawing.Point(264, 335);
             this.six.Name = "six";
             this.six.Size = new System.Drawing.Size(100, 100);
             this.six.TabIndex = 11;
@@ -181,27 +187,29 @@
             // clear
             // 
             this.clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Location = new System.Drawing.Point(369, 306);
+            this.clear.Location = new System.Drawing.Point(370, 335);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(100, 100);
             this.clear.TabIndex = 12;
             this.clear.Text = "C";
             this.clear.UseVisualStyleBackColor = true;
+            this.clear.Click += new System.EventHandler(this.clear_Click);
             // 
             // sign
             // 
             this.sign.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sign.Location = new System.Drawing.Point(51, 518);
+            this.sign.Location = new System.Drawing.Point(52, 547);
             this.sign.Name = "sign";
             this.sign.Size = new System.Drawing.Size(100, 100);
             this.sign.TabIndex = 13;
             this.sign.Text = "+/−";
             this.sign.UseVisualStyleBackColor = true;
+            this.sign.Click += new System.EventHandler(this.sign_Click);
             // 
             // zero
             // 
             this.zero.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zero.Location = new System.Drawing.Point(157, 518);
+            this.zero.Location = new System.Drawing.Point(158, 547);
             this.zero.Name = "zero";
             this.zero.Size = new System.Drawing.Size(100, 100);
             this.zero.TabIndex = 14;
@@ -212,27 +220,29 @@
             // decimalPoint
             // 
             this.decimalPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.decimalPoint.Location = new System.Drawing.Point(263, 518);
+            this.decimalPoint.Location = new System.Drawing.Point(264, 547);
             this.decimalPoint.Name = "decimalPoint";
             this.decimalPoint.Size = new System.Drawing.Size(100, 100);
             this.decimalPoint.TabIndex = 15;
             this.decimalPoint.Text = ".";
             this.decimalPoint.UseVisualStyleBackColor = true;
+            this.decimalPoint.Click += new System.EventHandler(this.decimalPoint_Click);
             // 
             // equals
             // 
             this.equals.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equals.Location = new System.Drawing.Point(369, 412);
+            this.equals.Location = new System.Drawing.Point(370, 441);
             this.equals.Name = "equals";
             this.equals.Size = new System.Drawing.Size(100, 206);
             this.equals.TabIndex = 16;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = true;
+            this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // three
             // 
             this.three.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.three.Location = new System.Drawing.Point(263, 412);
+            this.three.Location = new System.Drawing.Point(264, 441);
             this.three.Name = "three";
             this.three.Size = new System.Drawing.Size(100, 100);
             this.three.TabIndex = 19;
@@ -243,7 +253,7 @@
             // two
             // 
             this.two.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.two.Location = new System.Drawing.Point(157, 412);
+            this.two.Location = new System.Drawing.Point(158, 441);
             this.two.Name = "two";
             this.two.Size = new System.Drawing.Size(100, 100);
             this.two.TabIndex = 18;
@@ -254,7 +264,7 @@
             // one
             // 
             this.one.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.one.Location = new System.Drawing.Point(51, 412);
+            this.one.Location = new System.Drawing.Point(52, 441);
             this.one.Name = "one";
             this.one.Size = new System.Drawing.Size(100, 100);
             this.one.TabIndex = 17;
@@ -262,11 +272,22 @@
             this.one.UseVisualStyleBackColor = true;
             this.one.Click += new System.EventHandler(this.one_Click);
             // 
+            // divideByZeroErr
+            // 
+            this.divideByZeroErr.AutoSize = true;
+            this.divideByZeroErr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.divideByZeroErr.ForeColor = System.Drawing.Color.Red;
+            this.divideByZeroErr.Location = new System.Drawing.Point(366, 91);
+            this.divideByZeroErr.Name = "divideByZeroErr";
+            this.divideByZeroErr.Size = new System.Drawing.Size(0, 20);
+            this.divideByZeroErr.TabIndex = 20;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 639);
+            this.ClientSize = new System.Drawing.Size(526, 667);
+            this.Controls.Add(this.divideByZeroErr);
             this.Controls.Add(this.three);
             this.Controls.Add(this.two);
             this.Controls.Add(this.one);
@@ -289,6 +310,7 @@
             this.Controls.Add(this.numberInput);
             this.Name = "Calculator";
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.Calculator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,6 +338,7 @@
         private System.Windows.Forms.Button three;
         private System.Windows.Forms.Button two;
         private System.Windows.Forms.Button one;
+        private System.Windows.Forms.Label divideByZeroErr;
     }
 }
 
