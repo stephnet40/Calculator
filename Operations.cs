@@ -28,6 +28,8 @@ namespace Calculator
                     break;
             }
 
+            result = Math.Round(result, 8);
+
             if (result.ToString().Length > 20)
             {
                 numberInput.Text = "ERR";
