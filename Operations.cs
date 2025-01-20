@@ -28,7 +28,7 @@ namespace Calculator
                     break;
             }
 
-            if (result.ToString().Length > 8)
+            if (result.ToString().Length > 20)
             {
                 numberInput.Text = "ERR";
             }

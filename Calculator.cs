@@ -34,7 +34,7 @@ namespace Calculator
                 startNum2 = false;
             }
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "0";
         }
 
@@ -47,7 +47,7 @@ namespace Calculator
                 startNum2 = false;
             } 
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "1";
         }
 
@@ -60,7 +60,7 @@ namespace Calculator
                 startNum2 = false;
             }
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "2";
         }
 
@@ -73,7 +73,7 @@ namespace Calculator
                 startNum2 = false;
             }
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "3";
         }
 
@@ -86,7 +86,7 @@ namespace Calculator
                 startNum2 = false;
             }
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "4";
         }
 
@@ -99,7 +99,7 @@ namespace Calculator
                 startNum2 = false;
             }
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "5";
         }
 
@@ -112,7 +112,7 @@ namespace Calculator
                 startNum2 = false;
             }
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "6";
         }
 
@@ -125,7 +125,7 @@ namespace Calculator
                 startNum2 = false;
             }
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "7";
         }
 
@@ -138,7 +138,7 @@ namespace Calculator
                 startNum2 = false;
             }
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "8";
         }
 
@@ -151,7 +151,7 @@ namespace Calculator
                 startNum2 = false;
             }
 
-            if (numberInput.Text.Length < 8)
+            if (numberInput.Text.Length < 20)
                 numberInput.Text += "9";
         }
 
