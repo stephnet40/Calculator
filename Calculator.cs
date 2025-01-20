@@ -231,7 +231,7 @@ namespace Calculator
             {
                 if (operation == "" && CheckNoDivisionByZero(prevNumEntered, prevOperation))
                 {
-                    num1 = DoOperation(num2, prevNumEntered, prevOperation);
+                    num1 = prevOperation != "" ? DoOperation(num2, prevNumEntered, prevOperation) : num2;
                 } 
                 else if (CheckNoDivisionByZero(num2, operation))
                 {
